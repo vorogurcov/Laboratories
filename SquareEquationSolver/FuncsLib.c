@@ -69,8 +69,22 @@ void User_Interface(Equation const* OurEquation)
 {
 	double a, b, c;
 	printf("Please, type in 3 double parameters of your equation.\n");
-	//Check if double
-	scanf("%lf %lf %lf", &a, &b, &c);
+
+	if (scanf("%lf %lf %lf", &a, &b, &c) != 3)
+	{
+		printf("Your parameters are incorrect.Try again.\n");
+		exit(1);
+	}
+
 	GetParameters(OurEquation, a, b, c);
 }
 
+void ShowSolution(Solution const* OurSolution)
+{
+	if (OurSolution->Cur == NoSol)
+		printf("There are no solutions for your equation.\n");
+	else if (OurSolution->Cur == OneSol)
+		printf("There is one solution for your equation and it's %lf.\n", *OurSolution->x1);
+	else
+		printf("There are two solutions for your equation and they are %lf,%lf.\n", *OurSolution->x1, *OurSolution->x2);
+}
