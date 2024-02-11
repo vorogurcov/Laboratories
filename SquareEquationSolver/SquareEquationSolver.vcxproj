@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FuncsLib.c" />
     <ClCompile Include="Main.c" />
   </ItemGroup>
   <ItemGroup>
