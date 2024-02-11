@@ -1,4 +1,5 @@
 Square Equation prog
+
 Problem : We need to solve the equation
 
 Requirements : The equation looks like this : ax^2 + bx + c = 0. It is given with 3 parameters a,b,c which are Real. We need to get all the roots of the equation. The i/o entity is console. We have only one equation.
